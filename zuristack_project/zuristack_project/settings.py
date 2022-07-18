@@ -22,11 +22,11 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = config('DJANGO_SECRET_KEY', default='django-insecure-0v3eywq&vr#ixy7eabwyn*a9zq&%g+itvz_1=$lbra2pio9%8^')
-print(SECRET_KEY, "\n")
+# print(SECRET_KEY, "\n")
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = config('DJANGO_DEBUG', default=False, cast=bool)
-print(DEBUG, "\n")
+# print(DEBUG, "\n")
 
 ALLOWED_HOSTS = ['*']
 
@@ -109,6 +109,8 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+# Authentication 
+AUTH_USER_MODEL = 'accounts.CustomUser' 
 
 # Internationalization
 # https://docs.djangoproject.com/en/4.0/topics/i18n/
